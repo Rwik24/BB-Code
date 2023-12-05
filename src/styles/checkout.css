@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.addTOCart__btn{
+  margin-bottom: 50px;
+}
+.checkout__bill {
+  background: #fde4e4;
+  padding: 30px;
+}
+
+.checkout__total {
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout__bill h6 {
+    font-size: 0.9rem;
+  }
+  .checkout__bill {
+    margin-top: 40px;
+  }
+}
+
+.mhead{
+  padding-left:80px;
+}
+
+.ts {
+  margin-top: -10px;
+  background-color: #F3BE10; /* Background color for the timeline section */
+  padding: 20px 0; /* Adjust the padding as needed */
+}
+
+.t {
+  position: relative;
+  width: 60%;
+  height: 4px; /* Make the timeline line thicker */
+  background-color: #e24c4c; /* Timeline line color */
+  margin: 20px 0; /* Adjust the margin as needed */
+  
+}
+
+.tm {
+  position: absolute;
+  width: 20px; /* Make the marker thicker */
+  height: 20px; /* Make the marker thicker */
+  background-color: #ff4848; /* Marker color */
+  border-radius: 50%; /* Make the marker circular */
+  top: -10px; /* Adjust the vertical position of the marker */
+  transform: translateX(-50%); /* Center the marker horizontally */
+}
+
+/* Marker hover effect */
+.tm:hover {
+  background-color: #ffffff; /* Marker color on hover */
+  transform: translateX(-50%) scale(1.2); /* Scale up the marker on hover */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Additional markers (customize positions as needed) */
+.tm:nth-child(2) {
+  left: 25%; /* Adjust the position of the second marker */
+}
+
+.tm:nth-child(3) {
+  left: 50%; /* Adjust the position of the third marker */
+}
+
+.tm:nth-child(4) {
+  left: 75%; /* Adjust the position of the fourth marker */
+}
+.tm:first-child {
+  background-color: #ff0000; /* Marker color for the first marker */
+  width: 30px; /* Adjust the width of the first marker */
+  height: 30px; /* Adjust the height of the first marker */
+  top: -15px; /* Adjust the vertical position of the first marker */
+  border-radius: 50%; /* Make the first marker circular */
+}
+
+/* Glow effect for the first marker */
+.tm:first-child::before,
+.tm:first-child::after {
+  content: '';
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 87, 51, 0) 50%, rgba(255, 87, 51, 0.5) 70%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: glowing 2s infinite;
+  opacity: 0;
+}
+
+.tm:first-child::before {
+  left: 0;
+  top: 0;
+}
+
+.tm:first-child::after {
+  right: 0;
+  top: 0;
+}
+
+@keyframes glowing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.picture-text-section img {
+  max-width: 100%; /* Ensure the image does not exceed its container width */
+  height: 450px; /* Maintain the aspect ratio of the image */
+  object-fit: cover;
+  display: block;
+  border-radius: 50px; /* Remove any extra spacing below the image */
+  margin-top: -75px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Base button styles */
+.addTOCart__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+.addTOCart__btn:hover {
+  background-color: #45a049; 
+  transform: scale(1.05); 
+}
+
+/* Button focus effect */
+.addTOCart__btn:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 5px rgba(69, 160, 73, 0.7); /* Light green box shadow on focus */
+}
+
+/* Button active effect */
+.addTOCart__btn:active {
+  background-color: #3d8f42; /* Slightly darker green on click */
+}
+
+/* Disabled button style */
+.addTOCart__btn:disabled {
+  background-color: #ccc; /* Gray background for disabled button */
+  cursor: not-allowed; /* Change cursor to 'not-allowed' for disabled button */
+}
+
+/* Add more styles as needed, such as border, text shadow, or gradients */
+
+
+.area-search {
+  position: relative;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.area-search input {
+  width: 100%;
+  background-color: #fde4e4;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  color: #555;
+  cursor: pointer;
+}
+
+.area-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.area-options button {
+  flex: 1;
+  padding: 10px;
+  background-color: #eb6010;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.area-options button:last-child {
+  margin-right: 0;
+}
+
+/* Add this to your existing stylesheet or create a new one */
+
+.manual-address-form {
+  margin-top: 20px;
+}
+
+.manual-address-form form {
+  display: grid;
+  gap: 10px;
+}
+
+.manual-address-form .form-group {
+  display: grid;
+  gap: 5px;
+}
+
+.manual-address-form label {
+  font-weight: bold;
+}
+
+.manual-address-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333; /* Default text color */
+}
+
+.manual-address-form input::placeholder {
+  color: #aaa; /* Lighter color for placeholder text */
+}
+
+.manual-address-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.manual-address-form button:hover {
+  background-color: #0056b3;
+}
+
+
+.saved-addresses {
+  margin-top: 20px;
+}
+
+.saved-addresses h6 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.saved-addresses button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  background-color: #ffffffb8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saved-addresses button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Add this to your existing stylesheet or create a new one */
+
+.saved-address {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right position as needed */
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888; 
+  
+  
+}

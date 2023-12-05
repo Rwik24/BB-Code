@@ -1,0 +1,107 @@
+.product-list-card {
+    border: 1px solid #e1e1e1;
+    width: 60%;
+    height: 200px;
+    border-radius: 50px;
+    margin: 10px auto; /* Center the card horizontally */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+  }
+  
+  .product-list-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-list-card img {
+    max-width:100%;
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  .card-img-list {
+    width: 100%;
+    height: auto;
+  }
+  .product-list-card .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    
+  }
+  
+  .product-list-card .product-card-price {
+    font-size: 18px;
+    font-weight: bold; 
+    color: #f36f6f;
+    margin-top: -20px;
+  }
+  
+  .product-list-card .add-to-cart-btn {
+    background-color: #f36f6f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 60px; 
+    margin-left: -51px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .product-list-card .add-to-cart-btn:hover {
+    background-color: #d55f5f;
+    transform: translateY(-3px); /* Add a slight upward movement on hover */
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .product-list-card {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        margin-left: 25px;
+        height: 110px;
+        
+      }
+      
+      .product-list-card img {
+        
+        border-radius: 2px;
+        height: 110px;
+        width: 50%;
+        margin-left: 163px;
+        margin-top: -142px;
+      }
+      
+      .product-list-card .row {
+        flex-direction: row-reverse; /* Reverse the order of flex items */
+      }
+      
+      
+      
+      .product-list-card .card-title {
+        font-size: 9px;
+        font-weight: bold;
+        width: 50%;
+      }
+      
+      .product-list-card .product-details {
+        font-size: 8px;
+        color: #555;
+        margin-bottom: 10px;
+        width: 40%;
+      }
+      
+      .product-list-card .product-card-price {
+        font-size: 12px;
+        
+      }
+      
+      .product-list-card .add-to-cart-btn {
+        margin-top: 5px;
+        margin-left: 20px;
+        font-size:5px;
+        padding: -15px;
+        
+      }
+  }
